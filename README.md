@@ -34,4 +34,4 @@ Furthermore, I used the following APIs to gather the football data and latest ne
 * [GNews](https://gnews.io/) - News API
 
 
-**DISCLAIMER:** I am by no means an iOS app development expert and don't claim to be one, this was my first app.
+**DISCLAIMER:** This was my first app and I don't claim to be an iOS app development expert.
