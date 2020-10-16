@@ -10,7 +10,7 @@ The app is in Spanish, as it is directed to the Spanish football fans community.
 ### Matches and Latest News
 In this tab of the app, the user sees the recent and upcoming matches and the latest news about its favourite team. Also, the tab icon is set to be the crest of the user's favourite team.
 
-<div style="text-align: center"><img src="assets/screenshots/LatestNews.GIF" style="width:30%"/></div>
+![Latest News GIF](assets/screenshots/LatestNews.GIF "Latest News")
 
 Under the Matches (Partidos in Spanish) section, the user will see the result of the last match played by his team as well as the live result if the team is playing at that moment. Furthermore,  upcoming matches are also shown if there are any. Dates and times of upcoming matches are adjusted to the user's timezone.
 
@@ -20,7 +20,7 @@ The Latest News (Últimas Noticias in Spanish) section shows the latest articles
 
 The Standings (Clasificación in Spanish) tab displays the current standings of the Spanish football league and the user's favourite team is highlighted.
 
-<div style="text-align: center"><img src="assets/screenshots/Standings.png" style="width:30%"/></div>
+![Standings](assets/screenshots/Standings.png "Standings")
 
 ### Settings
 
