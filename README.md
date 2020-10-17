@@ -1,6 +1,8 @@
-# CS50x Final Project: Futbolico
+# <img src="assets/logos/Futbolico-logo.png" style="width: 30px"/> Futbolico
 
-This project consists of an iOS app called Futbolico that allows you to get the latest results and news of your favourite team from the Spanish football (soccer) league as well as its upcoming matches and the current standings. Furthermore, some degree of customisation is possible through color themes and Light/Dark mode.
+**DISCLAIMER:** This app was developed as the final project for HarvardX's CS50 course.
+
+This iOS app allows you to get the latest results and news of your favourite team from the Spanish football (soccer) league as well as its upcoming matches and the current standings. Furthermore, some degree of customisation is possible through color themes and Light/Dark mode.
 
 The app is in Spanish, as it is directed to the Spanish football fans community.
 
@@ -16,7 +18,7 @@ Under the Matches (Partidos in Spanish) section, the user will see the result of
 
 The Latest News (Últimas Noticias in Spanish) section shows the latest articles published in Spanish about the team, at most 10. Moreover, tapping on one of the articles opens the full article on the publishers website.
 
-### Standings
+### Standings
 
 The Standings (Clasificación in Spanish) tab displays the current standings of the Spanish football league and the user's favourite team is highlighted.
 
@@ -32,6 +34,3 @@ This project was developed using Swift 5 and Xcode 11.
 Furthermore, I used the following APIs to gather the football data and latest news:
 * [football-data.org](https://www.football-data.org/) - Football data API
 * [GNews](https://gnews.io/) - News API
-
-
-**DISCLAIMER:** This was my first app and I don't claim to be an iOS app development expert.
