@@ -1,4 +1,4 @@
-# <img src="assets/logos/Futbolico-logo.png" style="width: 30px"/> Futbolico
+# Futbolico
 
 **DISCLAIMER:** This app was developed as the final project for HarvardX's CS50 course.
 
