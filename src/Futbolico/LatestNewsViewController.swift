@@ -43,11 +43,10 @@ class LatestNewsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         self.mainScrollView.refreshControl = refreshCont
         self.refreshCont.addTarget(self, action: #selector(refreshMatchesAndNews), for: .valueChanged)
+        self.refreshMatchesAndNews()
         
         self.matchesTableView.layer.cornerRadius = 8
         self.newsTableView.layer.cornerRadius = 8
-        
-        matchesAndNewsRequests()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,7 +54,7 @@ class LatestNewsViewController: UIViewController, UITableViewDelegate, UITableVi
         if favouriteTeamID != UserDefaults.standard.integer(forKey: "favouriteTeamID") {
             self.favouriteTeamID = UserDefaults.standard.integer(forKey: "favouriteTeamID")
             
-            matchesAndNewsRequests()
+            self.refreshMatchesAndNews()
         }
     }
     
@@ -90,12 +89,13 @@ class LatestNewsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @objc private func refreshMatchesAndNews() {
+        self.refreshCont.beginRefreshing()
+        let offsetPoint = CGPoint.init(x: 0, y: self.mainScrollView.contentOffset.y - self.refreshCont.frame.size.height)
+        self.mainScrollView.setContentOffset(offsetPoint, animated: true)
         matchesAndNewsRequests()
     }
     
     func matchesAndNewsRequests() {
-        self.refreshCont.beginRefreshing()
-        
         let session = RequestSession()
         
         let group = DispatchGroup()
@@ -145,7 +145,7 @@ class LatestNewsViewController: UIViewController, UITableViewDelegate, UITableVi
             group.leave()
         })
         
-        url = "https://gnews.io/api/v3/search?q=" + Constants.teams[favouriteTeamID]!["shortName"]! + "&lang=es&country=es&max=10&token=1c3fd9111e616c5f237277692af6bd80"
+        url = "https://gnews.io/api/v3/search?q=" + Constants.teams[favouriteTeamID]!["name"]! + "&lang=es&country=es&max=10&token=1c3fd9111e616c5f237277692af6bd80"
         group.enter()
         session.requestAPI(url: url, headers: [:], completionHandler: {data in
             let result = self.decodeArticlesFromData(data: data)
